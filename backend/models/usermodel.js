@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { type } from "os";
 
 const userSchema = new mongoose.Schema({
     fullName : {
@@ -26,7 +25,7 @@ const userSchema = new mongoose.Schema({
         default: "",
 
     },
-    // createdAT, updatedAt
+    // createdAT, updatedAt -- Member since createdAt
 }, { timestamps: true }
 );
 

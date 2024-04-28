@@ -33,7 +33,7 @@ const newUser = new User({
 })
 if (newUser) {
     //Generate JWT Token here
-generateTokenAndCookie(newUser._id, res);
+generateTokenAndSetCookie(newUser._id, res);
 await newUser.save();
 
 res.status(201).json({
@@ -59,7 +59,7 @@ try {
     const isPasswordCorrect = await bcrypt.compare(password,user?.password || "");
 
     if(!user || !isPasswordCorrect){
-        return res.status(400).json({error:"Invalid username or password"});
+        return res.status(400).json({error:"Invalid userName or password"});
     }
 
     generateTokenAndSetCookie(user._id, res);
