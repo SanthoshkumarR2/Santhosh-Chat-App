@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useLogin from "../../hooks/useLogin";
 
 const Login = () => {
-	const [userName, setuserName] = useState("");
+	const [userName, setUserName] = useState("");
 	const [password, setPassword] = useState("");
 
 	const { loading, login } = useLogin();
@@ -31,7 +31,7 @@ const Login = () => {
 							placeholder='Enter userName'
 							className='w-full input input-bordered h-10'
 							value={userName}
-							onChange={(e) => setuserName(e.target.value)}
+							onChange={(e) => setUserName(e.target.value)}
 						/>
 					</div>
 
