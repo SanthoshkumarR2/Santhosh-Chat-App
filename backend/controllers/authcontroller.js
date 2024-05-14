@@ -65,10 +65,10 @@ try {
     generateTokenAndSetCookie(user._id, res);
 
     res.status(200).json({
-        _id: newUser._id,
-        fullName: newUser.fullName,
-        userName: newUser.userName,
-        profilePic: newUser.profilePic,
+        _id: user._id,
+        fullName: user.fullName,
+        userName: user.userName,
+        profilePic: user.profilePic,
     });
 
 } catch (error) {
